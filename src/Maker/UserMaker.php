@@ -583,7 +583,7 @@ PHP
             'controllers' => $controllers,
         ];
 
-        $this->writes[] = [$this->projectDir.'/translations/messages+intl-icu.en.xlf', file_get_contents(\dirname(__DIR__).'/Resources/skeleton/translations/messages+intl-icu.en.xlf')];
+        $this->writes[] = [$this->projectDir.'/translations/messages+intl-icu.en.xlf', file_get_contents(\dirname(__DIR__).'/../resources/skeleton/translations/messages+intl-icu.en.xlf')];
         $this->writes[] = [$this->getTemplateFileName($baseTemplate), $this->getSkeleton('template/base.tpl.php', $vars)];
 
         if ($controllers['register']) {
@@ -636,7 +636,7 @@ PHP;
             extract($vars + $this->getDefaultTemplateVars(), \EXTR_OVERWRITE);
 
             ob_start();
-            require \dirname(__DIR__).'/Resources/skeleton/'.$path;
+            require \dirname(__DIR__) . '/../resources/skeleton/' .$path;
 
             return ob_get_clean();
         };

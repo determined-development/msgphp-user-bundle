@@ -15,9 +15,9 @@
     ],
     "require": {
         "msgphp/user": "^0.2",
-        "symfony/config": "^3.4 || ^4.3 || ^5.0 || ^6.0",
-        "symfony/dependency-injection": "^3.4 || ^4.3 || ^5.0 || ^6.0",
-        "symfony/http-kernel": "^3.4 || ^4.3 || ^5.0 || ^6.0"
+        "symfony/config": "^3.4 || ^4.3 || ^5.0 || ^6.0 || ^7.0",
+        "symfony/dependency-injection": "^3.4 || ^4.3 || ^5.0 || ^6.0 || ^7.0",
+        "symfony/http-kernel": "^3.4 || ^4.3 || ^5.0 || ^6.0 || ^7.0"
     },
     "config": {
         "preferred-install": {
@@ -32,11 +32,8 @@
     },
     "autoload": {
         "psr-4": {
-            "MsgPhp\\UserBundle\\": ""
-        },
-        "exclude-from-classmap": [
-            "/Tests/"
-        ]
+            "MsgPhp\\UserBundle\\": "src"
+        }
     },
     "minimum-stability": "dev"
 }
